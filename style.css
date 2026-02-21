@@ -1,0 +1,200 @@
+:root {
+    --accent: #2563eb;       /* Modernes Blau */
+    --accent-light: #e3edff;
+    --text: #1e293b;
+    --muted: #64748b;
+
+    --bg: #f5f7fa;           /* neuer clean Background */
+    --card-bg: #ffffff;
+
+    --border: #e2e8f0;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ✔ Moderner CLEAN Hintergrund */
+body {
+    font-family: system-ui, sans-serif;
+    background: var(--bg);
+    display: flex;
+    justify-content: center;
+    padding: 30px 15px;
+    color: var(--text);
+}
+
+/* ✔ Moderner, klarer Container (Card) */
+.cv-wrapper {
+    width: 100%;
+    max-width: 820px;
+    background: var(--card-bg);
+    border-radius: 16px;
+
+    /* sanfter Schatten */
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.06),
+        0 2px 6px rgba(0,0,0,0.04);
+
+    border: 1px solid var(--border);
+
+    padding: 30px 36px;
+}
+
+/* Header */
+.header {
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 12px;
+}
+
+.header h1 {
+    font-size: 34px;
+    color: var(--accent);
+    font-weight: 800;
+    letter-spacing: 0.02em;
+}
+
+.subtitle {
+    color: var(--muted);
+    margin-top: 6px;
+    font-size: 17px;
+}
+
+/* Accordion Sektionen */
+.accordion {
+    padding: 0;
+    border-bottom: 1px solid var(--border);
+    margin-top: 14px;
+}
+
+.accordion:last-of-type {
+    border-bottom: none;
+}
+
+/* Klickbarer Titel */
+.accordion-header {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 16px 0;
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--text);
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: color 0.2s ease;
+}
+
+.accordion-header:hover {
+    color: var(--accent);
+}
+
+/* Pfleil */
+.arrow {
+    font-size: 18px;
+    color: var(--muted);
+    transition: transform 0.25s ease, color 0.2s ease;
+}
+
+.arrow.rotate {
+    transform: rotate(90deg);
+    color: var(--accent);
+}
+
+/* Inhalt */
+.accordion-content {
+    display: none;
+    padding: 0 0 16px;
+    font-size: 16px;
+    color: var(--text);
+    line-height: 1.65;
+}
+
+.accordion-content.open {
+    display: block;
+}
+
+/* Listen */
+.list {
+    list-style: none;
+    margin-top: 4px;
+}
+
+.list li {
+    margin-bottom: 8px;
+}
+
+.list strong {
+    color: var(--accent);
+}
+
+/* Timeline */
+.timeline {
+    list-style: none;
+    margin-top: 4px;
+}
+
+.timeline li {
+    position: relative;
+    padding-left: 16px;
+    margin-bottom: 10px;
+}
+
+.timeline li::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    background: var(--accent);
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 7px;
+}
+
+/* Tags */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    padding: 8px 14px;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-size: 14px;
+    border-radius: 999px;
+    font-weight: 600;
+    border: 1px solid #c7d8ff;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .cv-wrapper {
+        padding: 24px 20px;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .accordion-header {
+        font-size: 17px;
+    }
+
+    .accordion-content {
+        font-size: 15px;
+    }
+}
+
