@@ -261,22 +261,22 @@
       element.classList.add(className);
     }
 
-    document.querySelectorAll(".accordion").forEach((item) => {
-      const content = item.querySelector(".accordion-content");
+    document.querySelectorAll(".accordion").forEach((accordion) => {
+      const content = accordion.querySelector(".accordion-content");
 
-      item.addEventListener("toggle", () => {
-        if (item.open) {
-          restartAnimation(content, "animate-open");
+      accordion.addEventListener("toggle", () => {
+        if (accordion.open) {
+          restartAnimation(content, "animate-section");
         }
       });
     });
 
-    document.querySelectorAll(".inner-details").forEach((item) => {
-      const content = item.querySelector(".more-content");
+    document.querySelectorAll(".inner-details").forEach((detail) => {
+      const content = detail.querySelector(".more-content");
 
-      item.addEventListener("toggle", () => {
-        if (item.open) {
-          restartAnimation(content, "animate-open-strong");
+      detail.addEventListener("toggle", () => {
+        if (detail.open) {
+          restartAnimation(content, "animate-more");
         }
       });
     });
