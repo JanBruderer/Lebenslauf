@@ -64,27 +64,39 @@ body {
 }
 
 .arrow {
-  transition: transform 0.4s ease;
+  transition: transform 0.35s ease;
 }
 
 .accordion[open] .arrow {
   transform: rotate(90deg);
 }
 
-.accordion-content {
-  padding: 0 0 18px;
-  animation: fadeSlide 0.45s ease;
+/* WICHTIG: Diese Transition läuft bei jedem Öffnen/Schliessen */
+.accordion-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.42s ease;
 }
 
-@keyframes fadeSlide {
-  from {
-    opacity: 0;
-    transform: translateY(-14px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.accordion[open] .accordion-panel {
+  grid-template-rows: 1fr;
+}
+
+.accordion-inner {
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition:
+    opacity 0.32s ease,
+    transform 0.32s ease,
+    padding 0.32s ease;
+  padding: 0 0 0 0;
+}
+
+.accordion[open] .accordion-inner {
+  opacity: 1;
+  transform: translateY(0);
+  padding: 0 0 18px 0;
 }
 
 ul {
@@ -153,18 +165,16 @@ a:hover {
   font-size: 14px;
   color: #222222;
   z-index: 20;
-  animation: tooltipFade 0.25s ease;
+  opacity: 0;
+  transform: translateY(-6px);
+  animation: tooltipIn 0.22s ease forwards;
 }
 
 .skill-tooltip:hover .tooltip-box {
   display: block;
 }
 
-@keyframes tooltipFade {
-  from {
-    opacity: 0;
-    transform: translateY(-6px);
-  }
+@keyframes tooltipIn {
   to {
     opacity: 1;
     transform: translateY(0);
@@ -218,24 +228,39 @@ a:hover {
   border-color: #93c5fd;
 }
 
+/* Auch hier: Transition statt einmaliger Animation */
+.more-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.38s ease;
+}
+
+.inner-details[open] .more-panel {
+  grid-template-rows: 1fr;
+}
+
+.more-inner {
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition:
+    opacity 0.28s ease,
+    transform 0.28s ease,
+    padding-top 0.28s ease;
+  padding-top: 0;
+}
+
+.inner-details[open] .more-inner {
+  opacity: 1;
+  transform: translateY(0);
+  padding-top: 12px;
+}
+
 .more-box {
-  margin-top: 12px;
   padding: 14px;
   border-left: 3px solid #2563eb;
   background: #f8fbff;
   border-radius: 6px;
-  animation: fadeSlideStrong 0.45s ease;
-}
-
-@keyframes fadeSlideStrong {
-  from {
-    opacity: 0;
-    transform: translateY(-10px) scale(0.99);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
 }
 
 .certificate-frame {
@@ -256,7 +281,6 @@ a:hover {
   margin-bottom: 18px;
   padding-bottom: 12px;
   border-bottom: 1px solid #e5e5e5;
-  animation: fadeSlide 0.45s ease;
 }
 
 .reference-item:last-child {
