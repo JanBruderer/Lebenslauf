@@ -16,7 +16,7 @@
     </header>
 
     <section class="accordion">
-      <button class="accordion-header">
+      <button class="accordion-header" type="button">
         Kontakt <span class="arrow">▶</span>
       </button>
       <div class="accordion-content">
@@ -30,7 +30,7 @@
     </section>
 
     <section class="accordion">
-      <button class="accordion-header">
+      <button class="accordion-header" type="button">
         Über mich <span class="arrow">▶</span>
       </button>
       <div class="accordion-content">
@@ -44,7 +44,7 @@
     </section>
 
     <section class="accordion">
-      <button class="accordion-header">
+      <button class="accordion-header" type="button">
         Fähigkeiten <span class="arrow">▶</span>
       </button>
       <div class="accordion-content">
@@ -106,7 +106,7 @@
     </section>
 
     <section class="accordion">
-      <button class="accordion-header">
+      <button class="accordion-header" type="button">
         Sprachen <span class="arrow">▶</span>
       </button>
       <div class="accordion-content">
@@ -120,7 +120,7 @@
     </section>
 
     <section class="accordion">
-      <button class="accordion-header">
+      <button class="accordion-header" type="button">
         Ausbildung <span class="arrow">▶</span>
       </button>
       <div class="accordion-content">
@@ -132,7 +132,7 @@
     </section>
 
     <section class="accordion">
-      <button class="accordion-header">
+      <button class="accordion-header" type="button">
         Praktische Erfahrung <span class="arrow">▶</span>
       </button>
       <div class="accordion-content">
@@ -207,7 +207,7 @@
     </section>
 
     <section class="accordion">
-      <button class="accordion-header">
+      <button class="accordion-header" type="button">
         Interessen <span class="arrow">▶</span>
       </button>
       <div class="accordion-content">
@@ -220,7 +220,7 @@
     </section>
 
     <section class="accordion">
-      <button class="accordion-header">
+      <button class="accordion-header" type="button">
         Referenzen <span class="arrow">▶</span>
       </button>
       <div class="accordion-content">
@@ -228,22 +228,16 @@
           <li class="reference-item">
             <strong>Klassenlehrperson</strong><br>
             Flade, Klosterschulhaus<br><br>
-
             <strong>Herr Michael Neidhart</strong><br>
-
             <a href="mailto:michael.neidhart@flade.ch">michael.neidhart@flade.ch</a><br>
-
             <a href="tel:0791984895">Tel. 079 198 48 95</a>
           </li>
 
           <li class="reference-item">
             <strong>Fachlehrperson</strong><br>
             Flade, Klosterschulhaus<br><br>
-
             <strong>Herr Michael Cozzio</strong><br>
-
             <a href="mailto:michael.cozzio@flade.ch">michael.cozzio@flade.ch</a><br>
-
             <a href="tel:0774317038">Tel. 077 431 70 38</a>
           </li>
         </ul>
@@ -251,7 +245,7 @@
     </section>
 
     <section class="accordion">
-      <button class="accordion-header">
+      <button class="accordion-header" type="button">
         Familieninformationen <span class="arrow">▶</span>
       </button>
       <div class="accordion-content">
@@ -269,19 +263,8 @@
       btn.addEventListener("click", () => {
         const content = btn.nextElementSibling;
         const arrow = btn.querySelector(".arrow");
-        const isOpen = content.classList.contains("open");
 
-        if (isOpen) {
-          content.style.maxHeight = content.scrollHeight + "px";
-          requestAnimationFrame(() => {
-            content.style.maxHeight = "0px";
-            content.classList.remove("open");
-          });
-        } else {
-          content.classList.add("open");
-          content.style.maxHeight = content.scrollHeight + "px";
-        }
-
+        content.classList.toggle("open");
         arrow.classList.toggle("rotate");
       });
     });
@@ -289,40 +272,10 @@
     document.querySelectorAll(".more-btn").forEach((btn) => {
       btn.addEventListener("click", () => {
         const box = btn.nextElementSibling;
-        const isOpen = box.classList.contains("show");
-
-        if (isOpen) {
-          box.style.maxHeight = box.scrollHeight + "px";
-          requestAnimationFrame(() => {
-            box.style.maxHeight = "0px";
-            box.classList.remove("show");
-          });
-          btn.textContent = "Mehr erfahren";
-        } else {
-          box.classList.add("show");
-          box.style.maxHeight = box.scrollHeight + "px";
-          btn.textContent = "Weniger anzeigen";
-        }
-      });
-    });
-
-    window.addEventListener("resize", () => {
-      document.querySelectorAll(".accordion-content.open").forEach((content) => {
-        content.style.maxHeight = content.scrollHeight + "px";
-      });
-
-      document.querySelectorAll(".more-box.show").forEach((box) => {
-        box.style.maxHeight = box.scrollHeight + "px";
-      });
-    });
-
-    window.addEventListener("load", () => {
-      document.querySelectorAll(".accordion-content.open").forEach((content) => {
-        content.style.maxHeight = content.scrollHeight + "px";
-      });
-
-      document.querySelectorAll(".more-box.show").forEach((box) => {
-        box.style.maxHeight = box.scrollHeight + "px";
+        box.classList.toggle("show");
+        btn.textContent = box.classList.contains("show")
+          ? "Weniger anzeigen"
+          : "Mehr erfahren";
       });
     });
   </script>
