@@ -55,6 +55,10 @@ body {
   display: none;
 }
 
+.accordion-header::marker {
+  display: none;
+}
+
 .accordion-header:hover {
   color: #2563eb;
 }
@@ -167,7 +171,6 @@ a:hover {
 
 .inner-details {
   margin-top: 6px;
-  margin-left: 0;
 }
 
 .more-summary {
@@ -183,6 +186,10 @@ a:hover {
 }
 
 .more-summary::-webkit-details-marker {
+  display: none;
+}
+
+.more-summary::marker {
   display: none;
 }
 
