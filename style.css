@@ -48,7 +48,7 @@ body {
   font-size: 18px;
   font-weight: 600;
   color: #111111;
-  transition: color 0.2s ease;
+  transition: color 0.25s ease;
 }
 
 .accordion-header::-webkit-details-marker {
@@ -64,7 +64,7 @@ body {
 }
 
 .arrow {
-  transition: transform 0.25s ease;
+  transition: transform 0.4s ease;
 }
 
 .accordion[open] .arrow {
@@ -72,14 +72,14 @@ body {
 }
 
 .accordion-content {
-  padding: 0 0 16px;
-  animation: fadeSlide 0.25s ease;
+  padding: 0 0 18px;
+  animation: fadeSlide 0.45s ease;
 }
 
 @keyframes fadeSlide {
   from {
     opacity: 0;
-    transform: translateY(-6px);
+    transform: translateY(-14px);
   }
   to {
     opacity: 1;
@@ -103,6 +103,7 @@ p {
 a {
   color: #2563eb;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 a:hover {
@@ -129,32 +130,45 @@ a:hover {
   color: #1d4ed8;
   font-weight: 600;
   cursor: default;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
 .skill-tag:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.12);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.14);
+  background: #e0eeff;
 }
 
 .tooltip-box {
   display: none;
   position: absolute;
   left: 0;
-  top: 115%;
+  top: 120%;
   width: 250px;
   background: #ffffff;
   border: 1px solid #dbeafe;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
   padding: 10px 12px;
   border-radius: 10px;
   font-size: 14px;
   color: #222222;
   z-index: 20;
+  animation: tooltipFade 0.25s ease;
 }
 
 .skill-tooltip:hover .tooltip-box {
   display: block;
+}
+
+@keyframes tooltipFade {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .experience-list {
@@ -177,12 +191,12 @@ a:hover {
   list-style: none;
   display: inline-block;
   cursor: pointer;
-  padding: 6px 10px;
+  padding: 7px 12px;
   border: 1px solid #cbd5e1;
   background: #f8fafc;
   border-radius: 6px;
   font-size: 14px;
-  transition: background 0.2s ease, border-color 0.2s ease;
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
 }
 
 .more-summary::-webkit-details-marker {
@@ -196,10 +210,12 @@ a:hover {
 .more-summary:hover {
   background: #eef2ff;
   border-color: #93c5fd;
+  transform: translateY(-1px);
 }
 
 .inner-details[open] .more-summary {
   background: #eef2ff;
+  border-color: #93c5fd;
 }
 
 .more-box {
@@ -208,7 +224,18 @@ a:hover {
   border-left: 3px solid #2563eb;
   background: #f8fbff;
   border-radius: 6px;
-  animation: fadeSlide 0.25s ease;
+  animation: fadeSlideStrong 0.45s ease;
+}
+
+@keyframes fadeSlideStrong {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.99);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 .certificate-frame {
@@ -229,6 +256,7 @@ a:hover {
   margin-bottom: 18px;
   padding-bottom: 12px;
   border-bottom: 1px solid #e5e5e5;
+  animation: fadeSlide 0.45s ease;
 }
 
 .reference-item:last-child {
