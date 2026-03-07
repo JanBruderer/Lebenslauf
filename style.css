@@ -79,22 +79,22 @@ body {
   margin-top: 12px;
 }
 
-.animate-open {
-  animation: openFadeSlide 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+.animate-section {
+  animation: sectionOpen 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.animate-open-strong {
-  animation: openFadeSlideStrong 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+.animate-more {
+  animation: moreOpen 0.75s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-@keyframes openFadeSlide {
+@keyframes sectionOpen {
   0% {
     opacity: 0;
-    transform: translateY(-26px) scale(0.985);
+    transform: translateY(-28px) scale(0.98);
   }
   60% {
     opacity: 1;
-    transform: translateY(4px) scale(1.005);
+    transform: translateY(6px) scale(1.01);
   }
   100% {
     opacity: 1;
@@ -102,10 +102,10 @@ body {
   }
 }
 
-@keyframes openFadeSlideStrong {
+@keyframes moreOpen {
   0% {
     opacity: 0;
-    transform: translateY(-30px) scale(0.98);
+    transform: translateY(-24px) scale(0.98);
   }
   55% {
     opacity: 1;
