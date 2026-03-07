@@ -140,7 +140,7 @@
 
           <li class="experience-item">
             <strong>2025:</strong> Sprachaufenthalt England (Torquay)
-            <button class="more-btn">Mehr erfahren</button>
+            <button class="more-btn" type="button">Mehr erfahren</button>
 
             <div class="more-box">
               <p>
@@ -174,7 +174,7 @@
 
           <li class="experience-item">
             <strong>ab 2025:</strong> ICT-Campus – Informatik-Förderprogramm
-            <button class="more-btn">Mehr erfahren</button>
+            <button class="more-btn" type="button">Mehr erfahren</button>
 
             <div class="more-box">
               <p>
@@ -231,13 +231,9 @@
 
             <strong>Herr Michael Neidhart</strong><br>
 
-            <a href="mailto:michael.neidhart@flade.ch">
-              michael.neidhart@flade.ch
-            </a><br>
+            <a href="mailto:michael.neidhart@flade.ch">michael.neidhart@flade.ch</a><br>
 
-            <a href="tel:0791984895">
-              Tel. 079 198 48 95
-            </a>
+            <a href="tel:0791984895">Tel. 079 198 48 95</a>
           </li>
 
           <li class="reference-item">
@@ -246,72 +242,90 @@
 
             <strong>Herr Michael Cozzio</strong><br>
 
-            <a href="mailto:michael.cozzio@flade.ch">
-              michael.cozzio@flade.ch
-            </a><br>
+            <a href="mailto:michael.cozzio@flade.ch">michael.cozzio@flade.ch</a><br>
 
-            <a href="tel:0774317038">
-              Tel. 077 431 70 38
-            </a>
+            <a href="tel:0774317038">Tel. 077 431 70 38</a>
           </li>
         </ul>
       </div>
     </section>
 
-   
+    <section class="accordion">
+      <button class="accordion-header">
+        Familieninformationen <span class="arrow">▶</span>
+      </button>
+      <div class="accordion-content">
+        <ul>
+          <li><strong>Eltern:</strong> auf Wunsch ergänzbar</li>
+          <li><strong>Geschwister:</strong> auf Wunsch ergänzbar</li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+
   <script>
-  document.querySelectorAll(".accordion-header").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const content = btn.nextElementSibling;
-      const arrow = btn.querySelector(".arrow");
-      const isOpen = content.classList.contains("open");
+    document.querySelectorAll(".accordion-header").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const arrow = btn.querySelector(".arrow");
+        const isOpen = content.classList.contains("open");
 
-      if (isOpen) {
+        if (isOpen) {
+          content.style.maxHeight = content.scrollHeight + "px";
+          requestAnimationFrame(() => {
+            content.style.maxHeight = "0px";
+            content.classList.remove("open");
+          });
+        } else {
+          content.classList.add("open");
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+
+        arrow.classList.toggle("rotate");
+      });
+    });
+
+    document.querySelectorAll(".more-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const box = btn.nextElementSibling;
+        const isOpen = box.classList.contains("show");
+
+        if (isOpen) {
+          box.style.maxHeight = box.scrollHeight + "px";
+          requestAnimationFrame(() => {
+            box.style.maxHeight = "0px";
+            box.classList.remove("show");
+          });
+          btn.textContent = "Mehr erfahren";
+        } else {
+          box.classList.add("show");
+          box.style.maxHeight = box.scrollHeight + "px";
+          btn.textContent = "Weniger anzeigen";
+        }
+      });
+    });
+
+    window.addEventListener("resize", () => {
+      document.querySelectorAll(".accordion-content.open").forEach((content) => {
         content.style.maxHeight = content.scrollHeight + "px";
-        requestAnimationFrame(() => {
-          content.style.maxHeight = "0px";
-          content.classList.remove("open");
-        });
-      } else {
-        content.classList.add("open");
+      });
+
+      document.querySelectorAll(".more-box.show").forEach((box) => {
+        box.style.maxHeight = box.scrollHeight + "px";
+      });
+    });
+
+    window.addEventListener("load", () => {
+      document.querySelectorAll(".accordion-content.open").forEach((content) => {
         content.style.maxHeight = content.scrollHeight + "px";
-      }
+      });
 
-      arrow.classList.toggle("rotate");
-    });
-  });
-
-  document.querySelectorAll(".more-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const box = btn.nextElementSibling;
-      const isOpen = box.classList.contains("show");
-
-      if (isOpen) {
+      document.querySelectorAll(".more-box.show").forEach((box) => {
         box.style.maxHeight = box.scrollHeight + "px";
-        requestAnimationFrame(() => {
-          box.style.maxHeight = "0px";
-          box.classList.remove("show");
-        });
-        btn.textContent = "Mehr erfahren";
-      } else {
-        box.classList.add("show");
-        box.style.maxHeight = box.scrollHeight + "px";
-        btn.textContent = "Weniger anzeigen";
-      }
+      });
     });
-  });
-
-  window.addEventListener("resize", () => {
-    document.querySelectorAll(".accordion-content.open").forEach((content) => {
-      content.style.maxHeight = content.scrollHeight + "px";
-    });
-
-    document.querySelectorAll(".more-box.show").forEach((box) => {
-      box.style.maxHeight = box.scrollHeight + "px";
-    });
-  });
-</script>
+  </script>
 
 </body>
-
 </html>
