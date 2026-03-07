@@ -19,17 +19,18 @@ body {
 .header {
   border-bottom: 2px solid #dddddd;
   margin-bottom: 30px;
-  padding-bottom: 15px;
+  padding-bottom: 18px;
 }
 
 .header h1 {
   font-size: 36px;
   margin: 0;
+  letter-spacing: 0.2px;
 }
 
 .subtitle {
   color: #666666;
-  margin-top: 6px;
+  margin-top: 8px;
   font-size: 17px;
 }
 
@@ -42,7 +43,7 @@ body {
   background: none;
   border: none;
   text-align: left;
-  padding: 16px 0;
+  padding: 18px 0;
   font-size: 18px;
   font-weight: 600;
   cursor: pointer;
@@ -50,6 +51,7 @@ body {
   justify-content: space-between;
   align-items: center;
   color: #111111;
+  transition: color 0.2s ease;
 }
 
 .accordion-header:hover {
@@ -57,7 +59,7 @@ body {
 }
 
 .arrow {
-  transition: transform 0.25s ease;
+  transition: transform 0.3s ease;
 }
 
 .arrow.rotate {
@@ -65,12 +67,22 @@ body {
 }
 
 .accordion-content {
-  display: none;
-  padding-bottom: 16px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-8px);
+  padding-bottom: 0;
+  transition:
+    max-height 0.45s ease,
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    padding-bottom 0.3s ease;
 }
 
 .accordion-content.open {
-  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  padding-bottom: 16px;
 }
 
 ul {
@@ -115,6 +127,12 @@ a:hover {
   color: #1d4ed8;
   font-weight: 600;
   cursor: default;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-tag:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.12);
 }
 
 .tooltip-box {
@@ -153,24 +171,36 @@ a:hover {
   cursor: pointer;
   border-radius: 6px;
   font-size: 14px;
+  transition: background 0.2s ease, border-color 0.2s ease;
 }
 
 .more-btn:hover {
   background: #eef2ff;
+  border-color: #93c5fd;
 }
 
 .more-box {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-6px);
   margin-top: 12px;
   margin-left: 4px;
-  padding: 14px;
+  padding: 0 14px;
   border-left: 3px solid #2563eb;
   background: #f8fbff;
   border-radius: 6px;
+  transition:
+    max-height 0.45s ease,
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    padding 0.3s ease;
 }
 
 .more-box.show {
-  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  padding: 14px;
 }
 
 .certificate-frame {
