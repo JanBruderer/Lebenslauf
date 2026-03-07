@@ -64,39 +64,57 @@ body {
 }
 
 .arrow {
-  transition: transform 0.35s ease;
+  transition: transform 0.45s ease;
 }
 
 .accordion[open] .arrow {
-  transform: rotate(90deg);
+  transform: rotate(90deg) scale(1.12);
 }
 
-/* WICHTIG: Diese Transition läuft bei jedem Öffnen/Schliessen */
-.accordion-panel {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.42s ease;
+.accordion-content {
+  padding: 0 0 18px;
 }
 
-.accordion[open] .accordion-panel {
-  grid-template-rows: 1fr;
+.more-content {
+  margin-top: 12px;
 }
 
-.accordion-inner {
-  overflow: hidden;
-  opacity: 0;
-  transform: translateY(-10px);
-  transition:
-    opacity 0.32s ease,
-    transform 0.32s ease,
-    padding 0.32s ease;
-  padding: 0 0 0 0;
+.animate-open {
+  animation: openFadeSlide 0.65s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.accordion[open] .accordion-inner {
-  opacity: 1;
-  transform: translateY(0);
-  padding: 0 0 18px 0;
+.animate-open-strong {
+  animation: openFadeSlideStrong 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes openFadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-26px) scale(0.985);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(4px) scale(1.005);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes openFadeSlideStrong {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.98);
+  }
+  55% {
+    opacity: 1;
+    transform: translateY(5px) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 ul {
@@ -165,9 +183,7 @@ a:hover {
   font-size: 14px;
   color: #222222;
   z-index: 20;
-  opacity: 0;
-  transform: translateY(-6px);
-  animation: tooltipIn 0.22s ease forwards;
+  animation: tooltipIn 0.28s ease;
 }
 
 .skill-tooltip:hover .tooltip-box {
@@ -175,7 +191,11 @@ a:hover {
 }
 
 @keyframes tooltipIn {
-  to {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
@@ -226,34 +246,6 @@ a:hover {
 .inner-details[open] .more-summary {
   background: #eef2ff;
   border-color: #93c5fd;
-}
-
-/* Auch hier: Transition statt einmaliger Animation */
-.more-panel {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.38s ease;
-}
-
-.inner-details[open] .more-panel {
-  grid-template-rows: 1fr;
-}
-
-.more-inner {
-  overflow: hidden;
-  opacity: 0;
-  transform: translateY(-8px);
-  transition:
-    opacity 0.28s ease,
-    transform 0.28s ease,
-    padding-top 0.28s ease;
-  padding-top: 0;
-}
-
-.inner-details[open] .more-inner {
-  opacity: 1;
-  transform: translateY(0);
-  padding-top: 12px;
 }
 
 .more-box {
