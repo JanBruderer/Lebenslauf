@@ -11,7 +11,7 @@
 
   <meta
     name="description"
-    content="Online-Lebenslauf von Jan Bruderer – Schüler mit Interesse an Informatik, ICT und Technik."
+    content="Online-Lebenslauf von Jan Bruderer – Schüler aus St. Gallen mit Interesse an Informatik, ICT und Technik."
   >
 
   <meta
@@ -21,7 +21,7 @@
 
   <meta
     property="og:description"
-    content="Schüler · Sekundarstufe · Interesse an Informatik, ICT und Technik"
+    content="Schüler · Informatik · ICT · Technik"
   >
 
   <title>Jan Bruderer – Online-Lebenslauf</title>
@@ -38,7 +38,7 @@
 
   <link
     rel="icon"
-    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%2323445c%22/><text x=%2250%22 y=%2265%22 text-anchor=%22middle%22 font-size=%2246%22 font-family=%22Arial%22 font-weight=%22700%22 fill=%22white%22>JB</text></svg>"
   >
 
 </head>
@@ -47,9 +47,9 @@
 <body>
 
 
-  <!-- =========================
+  <!-- ==============================
        HINTERGRUND
-  ========================== -->
+  =============================== -->
 
   <div class="bubbles">
     <div class="bubble"></div>
@@ -61,22 +61,24 @@
   </div>
 
 
-  <!-- =========================
+  <!-- ==============================
        NAVIGATION
-  ========================== -->
+  =============================== -->
 
   <nav class="navbar">
 
     <div class="nav-inner">
 
-      <div class="logo">
+      <button
+        class="logo"
+        onclick="showPage('start')"
+        type="button"
+      >
         Jan Bruderer
-      </div>
+      </button>
 
 
-      <!--
-        Wird durch CSS nur auf dem Handy angezeigt
-      -->
+      <!-- Nur auf dem Handy sichtbar -->
 
       <button
         class="menu-toggle"
@@ -140,16 +142,16 @@
   </nav>
 
 
-  <!-- =========================
+  <!-- ==============================
        HAUPTINHALT
-  ========================== -->
+  =============================== -->
 
   <main class="page">
 
 
-    <!-- =========================
-         STARTSEITE
-    ========================== -->
+    <!-- ==============================
+         START
+    =============================== -->
 
     <section
       id="start"
@@ -158,6 +160,7 @@
 
       <div class="start-layout">
 
+
         <div class="start-text">
 
           <div class="eyebrow">
@@ -165,18 +168,18 @@
           </div>
 
           <h1>
-            Jan Bruderer
+            Jan<br>Bruderer
           </h1>
 
           <p class="subtitle">
-            Schüler · Sekundarstufe · Interesse an Informatik, ICT und Technik
+            Informatik, ICT und Technik begeistern mich.
           </p>
 
           <p class="hero-text">
-            Motivierter Schüler mit grossem Interesse an Informatik,
-            technischen Systemen und praktischer Arbeit.
-            Diese Webseite habe ich als interaktiven Online-Lebenslauf
-            eigenständig im ICT-Campus entwickelt.
+            Ich bin Schüler aus St. Gallen und interessiere mich besonders
+            dafür, wie technische und digitale Lösungen funktionieren.
+            Gerne probiere ich Neues aus, arbeite praktisch und entwickle
+            eigene Projekte.
           </p>
 
 
@@ -184,16 +187,18 @@
 
             <button
               class="primary-btn"
-              onclick="showPage('ueber')"
+              onclick="showPage('projekte')"
             >
-              Mehr über mich
+              <i class="fa-solid fa-folder-open"></i>
+              Meine Projekte
             </button>
 
             <button
               class="secondary-btn"
               onclick="showPage('unterlagen')"
             >
-              Bewerbungsunterlagen
+              <i class="fa-solid fa-file-lines"></i>
+              Unterlagen
             </button>
 
           </div>
@@ -204,21 +209,21 @@
             <div>
               <strong>ICT-Campus</strong>
               <span>
-                Programmieren und technische Projekte
+                Programmieren & Projekte
               </span>
             </div>
 
             <div>
               <strong>Praxis</strong>
               <span>
-                Ferienjob und Schnupperlehren
+                Ferienjob & Schnupperlehren
               </span>
             </div>
 
             <div>
-              <strong>Eigene Projekte</strong>
+              <strong>Webentwicklung</strong>
               <span>
-                Webseiten mit HTML und CSS
+                HTML & CSS
               </span>
             </div>
 
@@ -235,119 +240,118 @@
           >
 
           <p>
-            Jan Bruderer
+            Schüler aus St. Gallen
           </p>
 
         </div>
+
 
       </div>
 
     </section>
 
 
-    <!-- =========================
+    <!-- ==============================
          ÜBER MICH
-    ========================== -->
+    =============================== -->
 
     <section
       id="ueber"
       class="site-page section"
     >
 
+      <div class="section-kicker">
+        Persönlichkeit
+      </div>
+
       <h2>
-        <i class="fa-solid fa-user"></i>
         Über mich
       </h2>
 
-      <p class="section-text">
-        Ich interessiere mich für Informatik, Technik und digitale
-        Entwicklungen. Besonders spannend finde ich es, neue Dinge
-        auszuprobieren und zu verstehen, wie technische Systeme funktionieren.
+      <p class="section-intro">
+        Technik interessiert mich nicht nur theoretisch.
+        Ich möchte verstehen, ausprobieren und selbst etwas entwickeln.
       </p>
 
 
       <div class="about-grid">
 
 
-        <div class="about-card">
+        <article class="about-card">
 
-          <h3>
+          <div class="card-icon">
             <i class="fa-solid fa-laptop-code"></i>
-            Technik & Informatik
+          </div>
+
+          <h3>
+            Informatik & Technik
           </h3>
 
           <p>
-            Informatik interessiert mich besonders, weil man dabei
-            logisches Denken und Kreativität miteinander verbinden kann.
-            Im ICT-Campus kann ich regelmässig neue Themen ausprobieren
-            und eigene Projekte umsetzen.
+            Im ICT-Campus beschäftige ich mich regelmässig mit
+            Programmierung und digitalen Projekten. Besonders gefällt
+            mir, dass ich Ideen direkt ausprobieren und selbst
+            Lösungen entwickeln kann.
           </p>
 
-        </div>
+        </article>
 
 
-        <div class="about-card">
+        <article class="about-card">
+
+          <div class="card-icon">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+          </div>
 
           <h3>
-            <i class="fa-solid fa-lightbulb"></i>
-            Lernen & Entwickeln
+            Praktisches Arbeiten
           </h3>
 
           <p>
-            Ich lerne gerne Neues und beschäftige mich mit Themen,
-            bei denen ich selbst ausprobieren und Lösungen finden kann.
-            Neue Herausforderungen motivieren mich, mich weiterzuentwickeln.
+            Durch verschiedene Schnupperlehren und meinen zweiwöchigen
+            Ferienjob als Elektroinstallateur konnte ich technische
+            Berufe direkt im Arbeitsalltag kennenlernen.
           </p>
 
-        </div>
+        </article>
 
 
-        <div class="about-card">
+        <article class="about-card">
 
-          <h3>
+          <div class="card-icon">
             <i class="fa-solid fa-earth-europe"></i>
+          </div>
+
+          <h3>
             Selbstständigkeit
           </h3>
 
           <p>
-            Während meines dreiwöchigen Sprachaufenthalts in Torquay
-            konnte ich meine Englischkenntnisse verbessern, internationale
-            Kontakte knüpfen und selbstständiger werden.
+            Während meines dreiwöchigen Sprachaufenthalts in England
+            konnte ich mein Englisch verbessern, internationale
+            Jugendliche kennenlernen und selbstständiger werden.
           </p>
 
-        </div>
+        </article>
 
 
-        <div class="about-card">
+        <article class="about-card">
 
-          <h3>
+          <div class="card-icon">
             <i class="fa-solid fa-medal"></i>
-            Sport
-          </h3>
-
-          <p>
-            Handball und Aikido gehören zu meinen wichtigsten Hobbys.
-            Dabei habe ich gelernt, konzentriert zu bleiben,
-            Verantwortung zu übernehmen und als Teil eines Teams zu arbeiten.
-          </p>
-
-        </div>
-
-
-        <div class="about-card wide-card">
+          </div>
 
           <h3>
-            <i class="fa-solid fa-arrow-trend-up"></i>
-            Meine Ziele
+            Sport & Verantwortung
           </h3>
 
           <p>
-            Ich möchte mich fachlich und persönlich weiterentwickeln,
-            neue Erfahrungen sammeln und mein Wissen in den Bereichen
-            Informatik, ICT und Technik weiter ausbauen.
+            Durch Handball und Aikido habe ich gelernt, konzentriert
+            zu bleiben, Verantwortung zu übernehmen und auch unter
+            Druck nicht aufzugeben.
           </p>
 
-        </div>
+        </article>
 
 
       </div>
@@ -355,122 +359,184 @@
     </section>
 
 
-    <!-- =========================
+    <!-- ==============================
          FÄHIGKEITEN
-    ========================== -->
+    =============================== -->
 
     <section
       id="faehigkeiten"
       class="site-page section"
     >
 
+      <div class="section-kicker">
+        Kompetenzen
+      </div>
+
       <h2>
-        <i class="fa-solid fa-gears"></i>
         Fähigkeiten
       </h2>
 
-      <p class="section-text">
-        Fähigkeiten, die ich in der Schule, im Sport,
-        im ICT-Campus und durch praktische Erfahrungen entwickeln konnte.
+      <p class="section-intro">
+        Diese Fähigkeiten konnte ich durch Schule, Sport,
+        ICT-Campus und praktische Erfahrungen entwickeln.
       </p>
 
 
       <div class="skills-grid">
 
-        <div class="skill-card">
-          <strong>Informatik</strong>
-          <span>ICT-Campus und ECDL Zertifikat</span>
-        </div>
 
         <div class="skill-card">
-          <strong>HTML & CSS</strong>
-          <span>Grundlagen durch eigene Webseiten</span>
+
+          <i class="fa-solid fa-computer"></i>
+
+          <div>
+            <strong>Informatik</strong>
+            <span>ICT-Campus und ECDL</span>
+          </div>
+
         </div>
 
-        <div class="skill-card">
-          <strong>Logisches Denken</strong>
-          <span>Programmieren, Schule und ICT-Campus</span>
-        </div>
 
         <div class="skill-card">
-          <strong>Technisches Verständnis</strong>
-          <span>Ferienjob, Schnupperlehren und eigene Projekte</span>
+
+          <i class="fa-solid fa-code"></i>
+
+          <div>
+            <strong>HTML & CSS</strong>
+            <span>Eigene Webseiten und Projekte</span>
+          </div>
+
         </div>
 
-        <div class="skill-card">
-          <strong>Teamfähigkeit</strong>
-          <span>Handball und praktische Arbeit</span>
-        </div>
 
         <div class="skill-card">
-          <strong>Disziplin</strong>
-          <span>Aikido und Handball</span>
+
+          <i class="fa-solid fa-brain"></i>
+
+          <div>
+            <strong>Logisches Denken</strong>
+            <span>Programmieren und Schule</span>
+          </div>
+
         </div>
 
-        <div class="skill-card">
-          <strong>Ausdauer</strong>
-          <span>ICT-Campus, Sport und Schule</span>
-        </div>
 
         <div class="skill-card">
-          <strong>Belastbarkeit</strong>
-          <span>Schule, Sport und neue Herausforderungen</span>
+
+          <i class="fa-solid fa-gears"></i>
+
+          <div>
+            <strong>Technisches Verständnis</strong>
+            <span>Praxis und Schnupperlehren</span>
+          </div>
+
         </div>
 
-        <div class="skill-card">
-          <strong>Konzentration</strong>
-          <span>Aikido und schulische Arbeit</span>
-        </div>
 
         <div class="skill-card">
-          <strong>Verantwortung</strong>
-          <span>Sprachaufenthalt und Aikido Kindertraining</span>
+
+          <i class="fa-solid fa-people-group"></i>
+
+          <div>
+            <strong>Teamfähigkeit</strong>
+            <span>Handball und praktische Arbeit</span>
+          </div>
+
         </div>
+
+
+        <div class="skill-card">
+
+          <i class="fa-solid fa-bullseye"></i>
+
+          <div>
+            <strong>Konzentration</strong>
+            <span>Aikido, Sport und Schule</span>
+          </div>
+
+        </div>
+
+
+        <div class="skill-card">
+
+          <i class="fa-solid fa-person-running"></i>
+
+          <div>
+            <strong>Ausdauer</strong>
+            <span>Sport, Schule und ICT-Campus</span>
+          </div>
+
+        </div>
+
+
+        <div class="skill-card">
+
+          <i class="fa-solid fa-handshake"></i>
+
+          <div>
+            <strong>Verantwortung</strong>
+            <span>Aikido Kindertraining</span>
+          </div>
+
+        </div>
+
 
       </div>
 
     </section>
 
 
-    <!-- =========================
+    <!-- ==============================
          PROJEKTE
-    ========================== -->
+    =============================== -->
 
     <section
       id="projekte"
       class="site-page section"
     >
 
+      <div class="section-kicker">
+        Eigene Arbeiten
+      </div>
+
       <h2>
-        <i class="fa-solid fa-folder-open"></i>
         Projekte
       </h2>
 
-      <p class="section-text">
-        Einige Projekte, an denen ich selbst gearbeitet habe.
+      <p class="section-intro">
+        Kleine Projekte, an denen ich selbst gearbeitet habe und bei
+        denen ich meine Kenntnisse in HTML und CSS praktisch anwenden konnte.
       </p>
 
 
       <div class="projects-grid">
 
 
+        <!-- GAME PORTAL -->
+
         <article class="project-card">
 
-          <div class="project-icon">
+          <div class="project-symbol">
             <i class="fa-solid fa-gamepad"></i>
           </div>
 
+
           <div class="project-content">
+
+            <span class="project-number">
+              Projekt 01
+            </span>
 
             <h3>
               Game-Portal
             </h3>
 
             <p>
-              Eigene Webseite mit verschiedenen kleinen Spielen.
-              Dabei konnte ich den Aufbau von Webseiten, die Gestaltung
-              mit CSS und erste interaktive Elemente praktisch ausprobieren.
+              Eine eigene Webseite mit verschiedenen kleinen Spielen.
+              Dabei habe ich vor allem den Aufbau der Webseite,
+              die Navigation und das Design mit HTML und CSS umgesetzt.
             </p>
+
 
             <div class="project-tags">
               <span>HTML</span>
@@ -478,13 +544,15 @@
               <span>Webdesign</span>
             </div>
 
+
             <a
               class="project-button"
               href="https://janbruderer.github.io/Game-Portal/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Webseite öffnen
+              Webseite ansehen
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
 
           </div>
@@ -492,31 +560,39 @@
         </article>
 
 
+        <!-- HOCHZEITSSÄNGERIN -->
+
         <article class="project-card">
 
-          <div class="project-icon">
-            <i class="fa-solid fa-music"></i>
+          <div class="project-symbol">
+            <i class="fa-solid fa-microphone-lines"></i>
           </div>
+
 
           <div class="project-content">
 
+            <span class="project-number">
+              Projekt 02
+            </span>
+
             <h3>
-              Webseite Hochzeitssängerin
+              Webseite für meine Schwester
             </h3>
 
             <p>
-              Moderne Webseite für meine Schwester zur Präsentation
-              ihrer Tätigkeit als Hochzeitssängerin.
-              Im Fokus standen klare Informationen,
-              ein persönlicher Eindruck und ein professionelles Design.
+              Für meine Schwester habe ich eine Webseite für ihre Tätigkeit
+              als Hochzeitssängerin erstellt. Dabei habe ich mich mit dem
+              Aufbau einer Webseite, der Gestaltung und einer
+              übersichtlichen Navigation beschäftigt.
             </p>
+
 
             <div class="project-tags">
               <span>HTML</span>
               <span>CSS</span>
-              <span>Design</span>
-              <span>Praxisprojekt</span>
+              <span>Webdesign</span>
             </div>
+
 
             <a
               class="project-button"
@@ -524,7 +600,8 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              Webseite öffnen
+              Webseite ansehen
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
 
           </div>
@@ -537,554 +614,694 @@
     </section>
 
 
-    <!-- =========================
+    <!-- ==============================
          ERFAHRUNG
-    ========================== -->
+    =============================== -->
 
     <section
       id="erfahrung"
       class="site-page section"
     >
 
+      <div class="section-kicker">
+        Praxis
+      </div>
+
       <h2>
-        <i class="fa-solid fa-briefcase"></i>
         Praktische Erfahrung
       </h2>
 
-      <p class="section-text">
-        Erfahrungen ausserhalb des normalen Schulalltags.
+      <p class="section-intro">
+        Erfahrungen, bei denen ich ausserhalb der Schule viel lernen konnte.
       </p>
 
 
-      <article class="experience-card">
-
-        <div class="experience-top">
-
-          <h3>
-            Ferienjob Elektroinstallateur – Elektro Binder AG
-          </h3>
-
-          <span>
-            Sommer 2026 · 2 Wochen
-          </span>
-
-        </div>
-
-        <p>
-          Im Sommer 2026 arbeitete ich während zwei Wochen bei der
-          Elektro Binder AG. Dabei erhielt ich einen vertieften Einblick
-          in den Berufsalltag eines Elektroinstallateurs und konnte bei
-          verschiedenen praktischen Arbeiten mithelfen.
-        </p>
-
-        <p>
-          Ich lernte neue Werkzeuge, Materialien und Arbeitsabläufe kennen
-          und konnte mein technisches Verständnis weiterentwickeln.
-          Besonders gefallen hat mir, dass ich vieles direkt in der Praxis
-          ausprobieren und dabei viel Neues lernen konnte.
-        </p>
-
-        <p>
-          Der Ferienjob hat mir zudem gezeigt, wie wichtig sorgfältiges
-          Arbeiten, Zuverlässigkeit und Teamarbeit sind.
-        </p>
-
-      </article>
+      <div class="experience-list">
 
 
-      <article class="experience-card">
+        <!-- ELEKTRO BINDER -->
 
-        <div class="experience-top">
+        <article class="experience-card">
+
+          <div class="experience-dot"></div>
+
+          <div class="experience-date">
+            Sommer 2026
+          </div>
 
           <h3>
-            Sprachaufenthalt in Torquay, England
+            Ferienjob Elektroinstallateur
           </h3>
 
-          <span>
-            Sommer 2025 · 3 Wochen
-          </span>
+          <div class="experience-company">
+            Elektro Binder AG · 2 Wochen
+          </div>
 
-        </div>
+          <p>
+            Im Sommer 2026 arbeitete ich während zwei Wochen bei der
+            Elektro Binder AG. Dabei erhielt ich einen vertieften Einblick
+            in den Berufsalltag eines Elektroinstallateurs und konnte bei
+            verschiedenen praktischen Arbeiten mithelfen.
+          </p>
 
-        <p>
-          Während meines dreiwöchigen Sprachaufenthalts in Torquay
-          besuchte ich eine Sprachschule und konnte mein Englisch
-          im Alltag anwenden und verbessern.
-        </p>
+          <p>
+            Ich lernte neue Werkzeuge, Materialien und Arbeitsabläufe kennen
+            und konnte mein technisches Verständnis weiterentwickeln.
+            Besonders gefallen hat mir, dass ich vieles direkt in der Praxis
+            ausprobieren und dabei viel Neues lernen konnte.
+          </p>
 
-        <p>
-          Ich lernte Jugendliche aus verschiedenen Ländern kennen
-          und wurde selbstständiger, da ich mehrere Wochen alleine
-          im Ausland unterwegs war.
-        </p>
+          <p>
+            Der Ferienjob hat mir zudem gezeigt, wie wichtig sorgfältiges
+            Arbeiten, Zuverlässigkeit und Teamarbeit sind.
+          </p>
 
-        <div class="button-row">
-
-          <a
-            href="https://www.esl.ch/de/lp/sprachaufenthalte"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            ESL
-          </a>
-
-          <a
-            href="https://www.kaplaninternational.com/language-schools/united-kingdom/torquay"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Kaplan Torquay
-          </a>
-
-          <a
-            href="sprachaufenthalt.pdf"
-            target="_blank"
-          >
-            Zertifikat öffnen
-          </a>
-
-        </div>
-
-      </article>
+        </article>
 
 
-      <article class="experience-card">
+        <!-- SPRACHAUFENTHALT -->
 
-        <div class="experience-top">
+        <article class="experience-card">
+
+          <div class="experience-dot"></div>
+
+          <div class="experience-date">
+            Sommer 2025
+          </div>
 
           <h3>
-            ICT-Campus
+            Sprachaufenthalt in Torquay
           </h3>
 
-          <span>
+          <div class="experience-company">
+            England · 3 Wochen
+          </div>
+
+          <p>
+            Während meines dreiwöchigen Sprachaufenthalts in Torquay
+            besuchte ich eine Sprachschule und konnte mein Englisch
+            im Alltag anwenden und verbessern.
+          </p>
+
+          <p>
+            Ich lernte Jugendliche aus verschiedenen Ländern kennen
+            und wurde selbstständiger, da ich mehrere Wochen alleine
+            im Ausland unterwegs war.
+          </p>
+
+
+          <div class="button-row">
+
+            <a
+              href="https://www.esl.ch/de/lp/sprachaufenthalte"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ESL
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <a
+              href="https://www.kaplaninternational.com/language-schools/united-kingdom/torquay"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Kaplan
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <a
+              href="sprachaufenthalt.pdf"
+              target="_blank"
+            >
+              Zertifikat öffnen
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- ICT CAMPUS -->
+
+        <article class="experience-card">
+
+          <div class="experience-dot"></div>
+
+          <div class="experience-date">
             seit Mai 2025
-          </span>
+          </div>
 
-        </div>
-
-        <p>
-          Im ICT-Campus beschäftige ich mich jeden zweiten Samstag
-          während vier Stunden mit Informatik und Programmierung.
-          Dabei lerne ich verschiedene Programmierkonzepte kennen,
-          experimentiere mit neuen Ideen und arbeite an eigenen Projekten.
-        </p>
-
-        <div class="button-row">
-
-          <a
-            href="https://www.ict-scouts.ch/de/campus/index.php"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <h3>
             ICT-Campus
-          </a>
+          </h3>
 
-          <a
-            href="ict-campus.pdf"
-            target="_blank"
-          >
-            Zertifikat öffnen
-          </a>
+          <div class="experience-company">
+            ICT Scouts / ICT Campus
+          </div>
 
-        </div>
+          <p>
+            Im ICT-Campus beschäftige ich mich jeden zweiten Samstag
+            während vier Stunden mit Informatik und Programmierung.
+            Dabei lerne ich verschiedene Programmierkonzepte kennen,
+            experimentiere mit neuen Ideen und arbeite an eigenen Projekten.
+          </p>
 
-      </article>
+
+          <div class="button-row">
+
+            <a
+              href="https://www.ict-scouts.ch/de/campus/index.php"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ICT-Campus
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <a
+              href="ict-campus.pdf"
+              target="_blank"
+            >
+              Zertifikat öffnen
+            </a>
+
+          </div>
+
+        </article>
 
 
-      <article class="experience-card">
+        <!-- AIKIDO -->
 
-        <div class="experience-top">
+        <article class="experience-card">
+
+          <div class="experience-dot"></div>
+
+          <div class="experience-date">
+            seit 2022
+          </div>
 
           <h3>
             Aikido Kindertraining
           </h3>
 
-          <span>
-            seit 2022
-          </span>
+          <div class="experience-company">
+            Unterstützung als Trainer
+          </div>
 
-        </div>
+          <p>
+            Beim Aikido unterstütze ich das Kindertraining.
+            Dabei übernehme ich Verantwortung, helfe jüngeren Teilnehmenden
+            und unterstütze beim Erklären und Vorzeigen von Übungen.
+          </p>
 
-        <p>
-          Beim Aikido unterstütze ich das Kindertraining.
-          Dabei übernehme ich Verantwortung, helfe jüngeren Teilnehmenden
-          und unterstütze beim Erklären und Vorzeigen von Übungen.
-        </p>
+        </article>
 
-      </article>
+
+      </div>
 
     </section>
 
 
-    <!-- =========================
+    <!-- ==============================
          SCHNUPPERLEHREN
-    ========================== -->
+    =============================== -->
 
     <section
       id="schnupper"
       class="site-page section"
     >
 
+      <div class="section-kicker">
+        Berufswahl
+      </div>
+
       <h2>
-        <i class="fa-solid fa-screwdriver-wrench"></i>
         Schnupperlehren
       </h2>
 
-      <p class="section-text">
-        Durch verschiedene Schnupperlehren konnte ich mehrere technische
-        und ICT-Berufe kennenlernen und miteinander vergleichen.
+      <p class="section-intro">
+        Durch verschiedene Schnupperlehren konnte ich technische
+        und ICT-Berufe direkt kennenlernen und miteinander vergleichen.
       </p>
 
 
       <div class="job-grid">
 
 
-        <!-- Gebäudeinformatiker -->
+        <!-- GEBÄUDEINFORMATIKER -->
 
-        <div class="job-card">
+        <article class="job-card">
 
-          <h3>
-            Gebäudeinformatiker EFZ
-          </h3>
+          <div class="job-heading">
 
-          <ul>
+            <div class="job-icon">
+              <i class="fa-solid fa-building"></i>
+            </div>
 
-            <li>
-              <a
-                href="https://lehmann.ch/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Lehmann Elektro AG
-              </a>
-              <br>
+            <h3>
+              Gebäudeinformatiker EFZ
+            </h3>
+
+          </div>
+
+
+          <div class="job-entry">
+
+            <a
+              href="https://lehmann.ch/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="company-link"
+            >
+              Lehmann Elektro AG
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <span>
               26. September 2025
-            </li>
+            </span>
+
+          </div>
 
 
-            <li>
-              <a
-                href="https://www.baumann-electro.ch/de/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Baumann Electro AG
-              </a>
-              <br>
+          <div class="job-entry">
+
+            <a
+              href="https://www.baumann-electro.ch/de/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="company-link"
+            >
+              Baumann Electro AG
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <span>
               9.–10. Oktober 2025
+            </span>
 
-              <div class="pdf-link-box">
-                <a
-                  href="bericht-baumann-gebaeudeinformatiker.pdf"
-                  target="_blank"
-                >
-                  Schnupperbericht
-                </a>
-              </div>
+            <a
+              class="small-document-link"
+              href="bericht-baumann-gebaeudeinformatiker.pdf"
+              target="_blank"
+            >
+              Schnupperbericht öffnen
+            </a>
 
-            </li>
+          </div>
 
 
-            <li>
-              <a
-                href="https://www.bichler.ch/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Bichler + Partner AG
-              </a>
-              <br>
+          <div class="job-entry">
+
+            <a
+              href="https://www.bichler.ch/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="company-link"
+            >
+              Bichler + Partner AG
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <span>
               5. Februar 2026
+            </span>
 
-              <div class="pdf-link-box">
-                <a
-                  href="bericht-bichler-partner.pdf"
-                  target="_blank"
-                >
-                  Schnupperbericht
-                </a>
-              </div>
+            <a
+              class="small-document-link"
+              href="bericht-bichler-partner.pdf"
+              target="_blank"
+            >
+              Schnupperbericht öffnen
+            </a>
 
-            </li>
+          </div>
 
 
-            <li>
-              <a
-                href="https://www.ibg.ch/engineering"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                IBG Engineering AG
-              </a>
-              <br>
+          <div class="job-entry">
+
+            <a
+              href="https://www.ibg.ch/engineering"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="company-link"
+            >
+              IBG Engineering AG
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <span>
               22. November 2025
-            </li>
+            </span>
+
+          </div>
 
 
-            <li>
-              <a
-                href="https://www.flughafen-zuerich.ch/de/unternehmen"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Flughafen Zürich AG
-              </a>
-              <br>
+          <div class="job-entry">
+
+            <a
+              href="https://www.flughafen-zuerich.ch/de/unternehmen"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="company-link"
+            >
+              Flughafen Zürich AG
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <span>
               21. April 2026
+            </span>
 
-              <div class="pdf-link-box">
-                <a
-                  href="bericht-flughafen-zuerich.pdf"
-                  target="_blank"
-                >
-                  Schnupperbericht
-                </a>
-              </div>
+            <a
+              class="small-document-link"
+              href="bericht-flughafen-zuerich.pdf"
+              target="_blank"
+            >
+              Schnupperbericht öffnen
+            </a>
 
-            </li>
+          </div>
 
 
-            <li>
-              <a
-                href="https://www.techcom.ch/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                TechCom electro AG
-              </a>
-              <br>
+          <div class="job-entry">
+
+            <a
+              href="https://www.techcom.ch/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="company-link"
+            >
+              TechCom electro AG
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <span>
               23.–24. April 2026
+            </span>
 
-              <div class="pdf-link-box">
-                <a
-                  href="bericht-techcom.pdf"
-                  target="_blank"
-                >
-                  Schnupperbericht
-                </a>
-              </div>
+            <a
+              class="small-document-link"
+              href="bericht-techcom.pdf"
+              target="_blank"
+            >
+              Schnupperbericht öffnen
+            </a>
 
-            </li>
+          </div>
 
-          </ul>
-
-        </div>
+        </article>
 
 
-        <!-- Elektroinstallateur -->
+        <!-- ELEKTROINSTALLATEUR -->
 
-        <div class="job-card">
+        <article class="job-card">
 
-          <h3>
-            Elektroinstallateur EFZ
-          </h3>
+          <div class="job-heading">
 
-          <ul>
+            <div class="job-icon">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
 
-            <li>
-              <a
-                href="https://www.baumann-electro.ch/de/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Baumann Electro AG
-              </a>
-              <br>
+            <h3>
+              Elektroinstallateur EFZ
+            </h3>
+
+          </div>
+
+
+          <div class="job-entry">
+
+            <a
+              href="https://www.baumann-electro.ch/de/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="company-link"
+            >
+              Baumann Electro AG
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <span>
               7.–8. Oktober 2025
-            </li>
+            </span>
 
-            <li>
-              <a
-                href="https://www.etavis.ch/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                ETAVIS
-              </a>
-              <br>
+          </div>
+
+
+          <div class="job-entry">
+
+            <a
+              href="https://www.etavis.ch/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="company-link"
+            >
+              ETAVIS
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <span>
               20. April 2026
-            </li>
+            </span>
 
-          </ul>
+          </div>
 
-        </div>
+        </article>
 
 
-        <!-- Multimediaelektroniker -->
+        <!-- MULTIMEDIAELEKTRONIKER -->
 
-        <div class="job-card">
+        <article class="job-card">
 
-          <h3>
-            Multimediaelektroniker EFZ
-          </h3>
+          <div class="job-heading">
 
-          <ul>
+            <div class="job-icon">
+              <i class="fa-solid fa-tv"></i>
+            </div>
 
-            <li>
-              <a
-                href="https://www.sak.ch/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                St. Gallisch-Appenzellische Kraftwerke AG
-              </a>
-              <br>
+            <h3>
+              Multimediaelektroniker EFZ
+            </h3>
+
+          </div>
+
+
+          <div class="job-entry">
+
+            <a
+              href="https://www.sak.ch/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="company-link"
+            >
+              St. Gallisch-Appenzellische Kraftwerke AG
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <span>
               7. Januar 2026
-            </li>
+            </span>
 
-          </ul>
+          </div>
 
-        </div>
+        </article>
 
 
-        <!-- Elektroniker -->
+        <!-- ELEKTRONIKER -->
 
-        <div class="job-card">
+        <article class="job-card">
 
-          <h3>
-            Elektroniker EFZ
-          </h3>
+          <div class="job-heading">
 
-          <ul>
+            <div class="job-icon">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
 
-            <li>
-              <a
-                href="https://www.gesys.ch/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Grossenbacher Systeme AG
-              </a>
-              <br>
+            <h3>
+              Elektroniker EFZ
+            </h3>
+
+          </div>
+
+
+          <div class="job-entry">
+
+            <a
+              href="https://www.gesys.ch/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="company-link"
+            >
+              Grossenbacher Systeme AG
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <span>
               16. November 2025 · ½ Tag
-            </li>
+            </span>
 
-          </ul>
+          </div>
 
-        </div>
+        </article>
 
 
-        <!-- Automatiker -->
+        <!-- AUTOMATIKER -->
 
-        <div class="job-card">
+        <article class="job-card">
 
-          <h3>
-            Automatiker EFZ
-          </h3>
+          <div class="job-heading">
 
-          <ul>
+            <div class="job-icon">
+              <i class="fa-solid fa-robot"></i>
+            </div>
 
-            <li>
-              <a
-                href="https://schmidautomation.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Schmid Automation AG
-              </a>
-              <br>
+            <h3>
+              Automatiker EFZ
+            </h3>
+
+          </div>
+
+
+          <div class="job-entry">
+
+            <a
+              href="https://schmidautomation.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="company-link"
+            >
+              Schmid Automation AG
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <span>
               12. Februar 2026
+            </span>
 
-              <div class="pdf-link-box">
-                <a
-                  href="bericht-schmid-automation.pdf"
-                  target="_blank"
-                >
-                  Schnupperbericht
-                </a>
-              </div>
+            <a
+              class="small-document-link"
+              href="bericht-schmid-automation.pdf"
+              target="_blank"
+            >
+              Schnupperbericht öffnen
+            </a>
 
-            </li>
+          </div>
 
-          </ul>
-
-        </div>
+        </article>
 
 
-        <!-- ICT-Fachmann -->
+        <!-- ICT-FACHMANN -->
 
-        <div class="job-card">
+        <article class="job-card">
 
-          <h3>
-            ICT-Fachmann EFZ
-          </h3>
+          <div class="job-heading">
 
-          <ul>
+            <div class="job-icon">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
 
-            <li>
-              <a
-                href="https://www.h-och.ch/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                HOCH Health Ostschweiz
-              </a>
-              <br>
+            <h3>
+              ICT-Fachmann EFZ
+            </h3>
+
+          </div>
+
+
+          <div class="job-entry">
+
+            <a
+              href="https://www.h-och.ch/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="company-link"
+            >
+              HOCH Health Ostschweiz
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <span>
               1. April 2026
+            </span>
 
-              <div class="pdf-link-box">
-                <a
-                  href="bericht-hoch-health.pdf"
-                  target="_blank"
-                >
-                  Schnupperbericht
-                </a>
-              </div>
+            <a
+              class="small-document-link"
+              href="bericht-hoch-health.pdf"
+              target="_blank"
+            >
+              Schnupperbericht öffnen
+            </a>
 
-            </li>
+          </div>
 
 
-            <li>
-              <a
-                href="https://www.raiffeisen.ch/rch/de.html"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Raiffeisen Schweiz
-              </a>
-              <br>
+          <div class="job-entry">
+
+            <a
+              href="https://www.raiffeisen.ch/rch/de.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="company-link"
+            >
+              Raiffeisen Schweiz
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <span>
               27. April 2026 · Infoanlass
+            </span>
 
-              <div class="pdf-link-box">
-                <a
-                  href="bericht-raiffeisen-bestaetigung.pdf"
-                  target="_blank"
-                >
-                  Bestätigung
-                </a>
-              </div>
+            <a
+              class="small-document-link"
+              href="bericht-raiffeisen-bestaetigung.pdf"
+              target="_blank"
+            >
+              Bestätigung öffnen
+            </a>
 
-            </li>
+          </div>
 
-          </ul>
-
-        </div>
+        </article>
 
 
-        <!-- Weiteres -->
+        <!-- WEITERES -->
 
-        <div class="job-card wide-card">
+        <article class="job-card job-wide">
 
-          <h3>
-            Weiteres
-          </h3>
+          <div class="job-heading">
 
-          <ul>
+            <div class="job-icon">
+              <i class="fa-solid fa-circle-info"></i>
+            </div>
 
-            <li>
-              <strong>
-                Infoabend Abacus
-              </strong>
-              <br>
-              Informatiker EFZ – Plattformentwicklung und
-              Applikationsentwicklung sowie ICT-Fachmann EFZ
-              <br>
+            <h3>
+              Weitere Berufsinformation
+            </h3>
+
+          </div>
+
+
+          <div class="job-entry">
+
+            <strong>
+              Infoabend Abacus
+            </strong>
+
+            <span>
               12. März 2026
-            </li>
+            </span>
 
-          </ul>
+            <p>
+              Informatiker EFZ Plattformentwicklung,
+              Informatiker EFZ Applikationsentwicklung
+              und ICT-Fachmann EFZ
+            </p>
 
-        </div>
+          </div>
+
+        </article>
 
 
       </div>
@@ -1092,97 +1309,150 @@
     </section>
 
 
-    <!-- =========================
+    <!-- ==============================
          AUSBILDUNG
-    ========================== -->
+    =============================== -->
 
     <section
       id="ausbildung"
       class="site-page section"
     >
 
+      <div class="section-kicker">
+        Schule & Sprachen
+      </div>
+
       <h2>
-        <i class="fa-solid fa-graduation-cap"></i>
-        Ausbildung & Sprachen
+        Ausbildung
       </h2>
 
 
-      <div class="grid-2">
+      <div class="education-grid">
 
 
-        <div class="timeline-card">
+        <!-- SCHULE -->
+
+        <article class="timeline-card">
 
           <h3>
-            Schule
+            Schulbildung
           </h3>
 
+
           <div class="timeline-item">
 
-            <strong>
-              2024 – heute
-            </strong>
+            <span class="timeline-year">
+              seit 2024
+            </span>
 
-            <p>
-              Sekundarstufe
-              <br>
-              Flade – Klosterschulhaus St. Gallen
-            </p>
+            <div>
+
+              <strong>
+                Sekundarstufe
+              </strong>
+
+              <p>
+                Flade – Klosterschulhaus St. Gallen
+              </p>
+
+            </div>
 
           </div>
 
 
           <div class="timeline-item">
 
-            <strong>
-              2018 – 2024
-            </strong>
+            <span class="timeline-year">
+              2018–2024
+            </span>
 
-            <p>
-              Primarschule Feldli
-              <br>
-              St. Gallen
-            </p>
+            <div>
+
+              <strong>
+                Primarschule
+              </strong>
+
+              <p>
+                Primarschule Feldli · St. Gallen
+              </p>
+
+            </div>
 
           </div>
 
-        </div>
+        </article>
 
 
-        <div class="timeline-card">
+        <!-- SPRACHEN -->
+
+        <article class="timeline-card">
 
           <h3>
             Sprachen
           </h3>
 
-          <div class="timeline-item">
-            <strong>Deutsch</strong>
-            <p>Muttersprache</p>
+
+          <div class="language-row">
+
+            <strong>
+              Deutsch
+            </strong>
+
+            <span>
+              Muttersprache
+            </span>
+
           </div>
 
-          <div class="timeline-item">
-            <strong>Tschechisch</strong>
-            <p>Muttersprache</p>
+
+          <div class="language-row">
+
+            <strong>
+              Tschechisch
+            </strong>
+
+            <span>
+              Muttersprache
+            </span>
+
           </div>
 
-          <div class="timeline-item">
-            <strong>Englisch</strong>
-            <p>Fortgeschritten</p>
+
+          <div class="language-row">
+
+            <strong>
+              Englisch
+            </strong>
+
+            <span>
+              Fortgeschritten
+            </span>
+
           </div>
 
-          <div class="timeline-item">
-            <strong>Französisch</strong>
-            <p>Grundkenntnisse</p>
+
+          <div class="language-row">
+
+            <strong>
+              Französisch
+            </strong>
+
+            <span>
+              Grundkenntnisse
+            </span>
+
           </div>
 
-        </div>
+
+        </article>
 
 
       </div>
 
 
-      <h2 class="small-heading">
+      <h3 class="subheading">
         Interessen
-      </h2>
+      </h3>
 
 
       <div class="tags">
@@ -1199,46 +1469,56 @@
     </section>
 
 
-    <!-- =========================
+    <!-- ==============================
          UNTERLAGEN
-    ========================== -->
+    =============================== -->
 
     <section
       id="unterlagen"
       class="site-page section"
     >
 
+      <div class="section-kicker">
+        Bewerbung
+      </div>
+
       <h2>
-        <i class="fa-solid fa-file-lines"></i>
-        Bewerbungsunterlagen
+        Unterlagen
       </h2>
 
-      <p class="section-text">
-        Hier können wichtige Unterlagen und Zertifikate direkt geöffnet werden.
+      <p class="section-intro">
+        Die wichtigsten Bewerbungsunterlagen und Nachweise
+        können direkt als PDF geöffnet werden.
       </p>
 
+
+      <!-- BEWERBUNGSUNTERLAGEN -->
 
       <h3 class="document-group-title">
         Bewerbungsunterlagen
       </h3>
 
 
-      <div class="documents-grid">
+      <div class="documents-list">
 
 
-        <div class="document-card">
+        <div class="document-row">
 
           <div class="document-icon">
-            <i class="fa-solid fa-file-pdf"></i>
+            <i class="fa-solid fa-file-lines"></i>
           </div>
 
-          <h3>
-            Lebenslauf
-          </h3>
+          <div class="document-info">
 
-          <p>
-            Aktueller Lebenslauf als PDF.
-          </p>
+            <strong>
+              Lebenslauf
+            </strong>
+
+            <span>
+              Vollständiger Lebenslauf als PDF
+            </span>
+
+          </div>
 
           <a
             href="lebenslauf.pdf"
@@ -1250,19 +1530,23 @@
         </div>
 
 
-        <div class="document-card">
+        <div class="document-row">
 
           <div class="document-icon">
-            <i class="fa-solid fa-file-pdf"></i>
+            <i class="fa-solid fa-graduation-cap"></i>
           </div>
 
-          <h3>
-            Zeugnisse
-          </h3>
+          <div class="document-info">
 
-          <p>
-            Schulzeugnisse als PDF.
-          </p>
+            <strong>
+              Zeugnisse
+            </strong>
+
+            <span>
+              Aktuelle Schulzeugnisse
+            </span>
+
+          </div>
 
           <a
             href="zeugnisse.pdf"
@@ -1277,123 +1561,149 @@
       </div>
 
 
+      <!-- ZERTIFIKATE -->
+
       <h3 class="document-group-title">
         Zertifikate & Nachweise
       </h3>
 
 
-      <div class="documents-grid">
+      <div class="documents-list">
 
 
-        <div class="document-card">
+        <div class="document-row">
 
           <div class="document-icon">
             <i class="fa-solid fa-code"></i>
           </div>
 
-          <h3>
-            ICT-Campus
-          </h3>
+          <div class="document-info">
 
-          <p>
-            Nachweis über meine Teilnahme am ICT-Campus.
-          </p>
+            <strong>
+              ICT-Campus
+            </strong>
+
+            <span>
+              Teilnahmebestätigung
+            </span>
+
+          </div>
 
           <a
             href="ict-campus.pdf"
             target="_blank"
           >
-            Zertifikat öffnen
+            PDF öffnen
           </a>
 
         </div>
 
 
-        <div class="document-card">
+        <div class="document-row">
 
           <div class="document-icon">
             <i class="fa-solid fa-earth-europe"></i>
           </div>
 
-          <h3>
-            Sprachaufenthalt
-          </h3>
+          <div class="document-info">
 
-          <p>
-            Zertifikat meines Sprachaufenthalts in England.
-          </p>
+            <strong>
+              Sprachaufenthalt England
+            </strong>
+
+            <span>
+              Kaplan Torquay
+            </span>
+
+          </div>
 
           <a
             href="sprachaufenthalt.pdf"
             target="_blank"
           >
-            Zertifikat öffnen
+            PDF öffnen
           </a>
 
         </div>
 
 
-        <div class="document-card">
+        <div class="document-row">
 
           <div class="document-icon">
             <i class="fa-solid fa-computer"></i>
           </div>
 
-          <h3>
-            ECDL
-          </h3>
+          <div class="document-info">
 
-          <p>
-            ECDL Zertifikat.
-          </p>
+            <strong>
+              ECDL
+            </strong>
+
+            <span>
+              Informatik-Zertifikat
+            </span>
+
+          </div>
 
           <a
             href="ecdl.pdf"
             target="_blank"
           >
-            Zertifikat öffnen
+            PDF öffnen
           </a>
 
         </div>
 
 
-        <div class="document-card">
+        <div class="document-row">
 
           <div class="document-icon">
-            <i class="fa-solid fa-chart-line"></i>
+            <i class="fa-solid fa-chart-column"></i>
           </div>
 
-          <h3>
-            Stellwerk
-          </h3>
+          <div class="document-info">
 
-          <p>
-            Ergebnisse des Stellwerk-Tests.
-          </p>
+            <strong>
+              Stellwerk
+            </strong>
+
+            <span>
+              Stellwerk-Ergebnisse
+            </span>
+
+          </div>
 
           <a
             href="stellwerk.pdf"
             target="_blank"
           >
-            Stellwerk öffnen
+            PDF öffnen
           </a>
 
         </div>
 
 
-        <div class="document-card upcoming">
+        <div class="document-row upcoming">
 
           <div class="document-icon">
             <i class="fa-solid fa-language"></i>
           </div>
 
-          <h3>
-            Cambridge B2 First
-          </h3>
+          <div class="document-info">
 
-          <p>
-            Prüfung geplant für Frühling 2027.
-          </p>
+            <strong>
+              Cambridge B2 First
+            </strong>
+
+            <span>
+              Prüfung geplant für Frühling 2027
+            </span>
+
+          </div>
+
+          <div class="planned-label">
+            geplant
+          </div>
 
         </div>
 
@@ -1403,74 +1713,77 @@
     </section>
 
 
-    <!-- =========================
+    <!-- ==============================
          KONTAKT
-    ========================== -->
+    =============================== -->
 
     <section
       id="kontakt"
       class="site-page section"
     >
 
-      <h2>
-        <i class="fa-solid fa-envelope"></i>
+      <div class="section-kicker">
         Kontakt
+      </div>
+
+      <h2>
+        Kontakt aufnehmen
       </h2>
 
-      <p class="section-text">
-        Gerne können Sie mich über die folgenden Kontaktdaten erreichen.
+      <p class="section-intro">
+        Für Fragen oder im Zusammenhang mit einer Bewerbung
+        bin ich gerne erreichbar.
       </p>
 
 
-      <div class="grid-2">
+      <div class="contact-grid">
 
 
-        <div class="info-card">
+        <!-- E-MAIL -->
 
-          <strong>
-            E-Mail
-          </strong>
+        <a
+          class="contact-card"
+          href="mailto:Jan.bruderer11@gmail.com"
+        >
 
-          <a href="mailto:Jan.bruderer11@gmail.com">
-            Jan.bruderer11@gmail.com
-          </a>
+          <div class="contact-icon">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
 
-        </div>
+          <div>
 
+            <span>
+              E-Mail
+            </span>
 
-        <div class="info-card">
+            <strong>
+              Jan.bruderer11@gmail.com
+            </strong>
 
-          <strong>
-            Telefon
-          </strong>
+          </div>
 
-          <a href="tel:+41774765792">
-            077 476 57 92
-          </a>
-
-        </div>
-
-
-        <div class="info-card">
-
-          <strong>
-            Adresse
-          </strong>
-
-          Paul-Brandt-Strasse 19
-          <br>
-          9000 St. Gallen
-
-        </div>
+        </a>
 
 
-        <div class="info-card">
+        <!-- WOHNORT -->
 
-          <strong>
-            Geburtsdatum
-          </strong>
+        <div class="contact-card">
 
-          12. September 2011
+          <div class="contact-icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+
+          <div>
+
+            <span>
+              Wohnort
+            </span>
+
+            <strong>
+              St. Gallen
+            </strong>
+
+          </div>
 
         </div>
 
@@ -1478,61 +1791,46 @@
       </div>
 
 
-      <h2 class="small-heading">
+      <!-- DATENSCHUTZ -->
+
+      <div class="privacy-note">
+
+        <i class="fa-solid fa-shield-halved"></i>
+
+        <p>
+          Vollständige Kontaktdaten, Adresse und weitere persönliche
+          Angaben befinden sich in meinen Bewerbungsunterlagen.
+        </p>
+
+      </div>
+
+
+      <!-- REFERENZEN -->
+
+      <h3 class="subheading">
         Referenzen
-      </h2>
+      </h3>
 
 
-      <div class="reference-grid">
+      <div class="reference-simple">
 
+        <i class="fa-solid fa-user-check"></i>
 
-        <div class="reference-card">
+        <div>
 
-          <h3>
-            Michael Neidhart
-          </h3>
-
-          <p>
-            Klassenlehrperson
-            <br>
-            Flade Klosterschulhaus
-          </p>
-
-          <a href="mailto:michael.neidhart@flade.ch">
-            michael.neidhart@flade.ch
-          </a>
-
-          <a href="tel:+41791984895">
-            079 198 48 95
-          </a>
-
-        </div>
-
-
-        <div class="reference-card">
-
-          <h3>
-            Michael Cozzio
-          </h3>
+          <strong>
+            Referenzen gerne auf Anfrage
+          </strong>
 
           <p>
-            Fachlehrperson
-            <br>
-            Flade Klosterschulhaus
+            Kontaktdaten meiner Lehrpersonen stelle ich bei einer
+            Bewerbung gerne zur Verfügung.
           </p>
 
-          <a href="mailto:michael.cozzio@flade.ch">
-            michael.cozzio@flade.ch
-          </a>
-
-          <a href="tel:+41774317038">
-            077 431 70 38
-          </a>
-
         </div>
-
 
       </div>
+
 
     </section>
 
@@ -1540,18 +1838,26 @@
   </main>
 
 
-  <!-- =========================
+  <!-- ==============================
        FOOTER
-  ========================== -->
+  =============================== -->
 
   <footer>
-    © 2026 Jan Bruderer · Online-Lebenslauf
+
+    <span>
+      © 2026 Jan Bruderer
+    </span>
+
+    <span>
+      Online-Lebenslauf
+    </span>
+
   </footer>
 
 
-  <!-- =========================
+  <!-- ==============================
        JAVASCRIPT
-  ========================== -->
+  =============================== -->
 
   <script>
 
@@ -1562,19 +1868,16 @@
       document.getElementById("navLinks");
 
 
-    /* =========================
-       HAMBURGER-MENÜ
+    /* ==========================
+       HAMBURGER MENÜ
     ========================== */
 
     menuToggle.addEventListener(
       "click",
       function () {
 
-        navLinks.classList.toggle("open");
-
-
         const isOpen =
-          navLinks.classList.contains("open");
+          navLinks.classList.toggle("open");
 
 
         menuToggle.setAttribute(
@@ -1592,7 +1895,7 @@
     );
 
 
-    /* =========================
+    /* ==========================
        SEITEN WECHSELN
     ========================== */
 
@@ -1607,7 +1910,7 @@
         );
 
 
-      /* Alle Seiten verstecken */
+      /* Alle Seiten ausblenden */
 
       pages.forEach(page => {
 
@@ -1640,17 +1943,14 @@
       });
 
 
-      /* Aktiven Button suchen */
+      /* Aktiven Menüpunkt suchen */
 
-      const clickedButton =
+      const activeButton =
         Array.from(buttons).find(
           button => {
 
             const onclick =
-              button.getAttribute(
-                "onclick"
-              );
-
+              button.getAttribute("onclick");
 
             return (
               onclick &&
@@ -1661,18 +1961,37 @@
         );
 
 
-      if (clickedButton) {
+      /* Aktiven Menüpunkt markieren */
 
-        clickedButton.classList.add(
+      if (activeButton) {
+
+        activeButton.classList.add(
           "active-btn"
         );
 
       }
 
 
-      /* =========================
-         HANDY-MENÜ SCHLIESSEN
-      ========================== */
+      /* Handy-Menü schliessen */
+
+      closeMenu();
+
+
+      /* Nach oben scrollen */
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+    }
+
+
+    /* ==========================
+       MENÜ SCHLIESSEN
+    ========================== */
+
+    function closeMenu() {
 
       navLinks.classList.remove("open");
 
@@ -1686,21 +2005,11 @@
       menuToggle.innerHTML =
         '<i class="fa-solid fa-bars"></i>';
 
-
-      /* =========================
-         NACH OBEN SCROLLEN
-      ========================== */
-
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-
     }
 
 
-    /* =========================
-       MENÜ BEI RESIZE SCHLIESSEN
+    /* ==========================
+       RESIZE
     ========================== */
 
     window.addEventListener(
@@ -1709,19 +2018,30 @@
 
         if (window.innerWidth > 760) {
 
-          navLinks.classList.remove(
-            "open"
-          );
+          closeMenu();
+
+        }
+
+      }
+    );
 
 
-          menuToggle.setAttribute(
-            "aria-expanded",
-            "false"
-          );
+    /* ==========================
+       AUSSERHALB DES MENÜS KLICKEN
+    ========================== */
 
+    document.addEventListener(
+      "click",
+      function (event) {
 
-          menuToggle.innerHTML =
-            '<i class="fa-solid fa-bars"></i>';
+        if (
+          window.innerWidth <= 760 &&
+          navLinks.classList.contains("open") &&
+          !navLinks.contains(event.target) &&
+          !menuToggle.contains(event.target)
+        ) {
+
+          closeMenu();
 
         }
 
